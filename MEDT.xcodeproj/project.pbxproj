@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6716AB5B2402462A0029A104 /* L102Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716AB5A2402462A0029A104 /* L102Localizer.swift */; };
 		67860ABC2401BA3500471136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67860ABB2401BA3500471136 /* AppDelegate.swift */; };
 		67860ABE2401BA3500471136 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67860ABD2401BA3500471136 /* SceneDelegate.swift */; };
 		67860AC02401BA3500471136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67860ABF2401BA3500471136 /* ViewController.swift */; };
@@ -14,6 +15,7 @@
 		67860AC52401BA3700471136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67860AC42401BA3700471136 /* Assets.xcassets */; };
 		67860AC82401BA3700471136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67860AC62401BA3700471136 /* LaunchScreen.storyboard */; };
 		67860AD02401BC1800471136 /* icons8-medical-mobile-app-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 67860ACF2401BC1800471136 /* icons8-medical-mobile-app-64.png */; };
+		67E59DDC24022BCA00C46B6A /* gradient.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 67E59DDB24022BCA00C46B6A /* gradient.jpeg */; };
 		67FD46952401C2FD00A5277B /* human_body_template___female_by_myraethcorax_d6yeynw-fullview.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FD46942401C2FC00A5277B /* human_body_template___female_by_myraethcorax_d6yeynw-fullview.png */; };
 		67FD46972401C4A000A5277B /* womanBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FD46962401C4A000A5277B /* womanBack.png */; };
 		67FD46992401C4A800A5277B /* womanFront.png in Resources */ = {isa = PBXBuildFile; fileRef = 67FD46982401C4A800A5277B /* womanFront.png */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6716AB5A2402462A0029A104 /* L102Localizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L102Localizer.swift; sourceTree = "<group>"; };
 		67860AB82401BA3500471136 /* MEDT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEDT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67860ABB2401BA3500471136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67860ABD2401BA3500471136 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		67860ACF2401BC1800471136 /* icons8-medical-mobile-app-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-medical-mobile-app-64.png"; path = "../../../icons8-medical-mobile-app-64.png"; sourceTree = "<group>"; };
 		67E59DD92402249200C46B6A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		67E59DDA2402249200C46B6A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		67E59DDB24022BCA00C46B6A /* gradient.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gradient.jpeg; path = ../../../gradient.jpeg; sourceTree = "<group>"; };
 		67FD46942401C2FC00A5277B /* human_body_template___female_by_myraethcorax_d6yeynw-fullview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "human_body_template___female_by_myraethcorax_d6yeynw-fullview.png"; path = "../../../human_body_template___female_by_myraethcorax_d6yeynw-fullview.png"; sourceTree = "<group>"; };
 		67FD46962401C4A000A5277B /* womanBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = womanBack.png; sourceTree = SOURCE_ROOT; };
 		67FD46982401C4A800A5277B /* womanFront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = womanFront.png; sourceTree = SOURCE_ROOT; };
@@ -75,11 +79,13 @@
 				67860AC42401BA3700471136 /* Assets.xcassets */,
 				67860AC62401BA3700471136 /* LaunchScreen.storyboard */,
 				67860AC92401BA3700471136 /* Info.plist */,
+				67E59DDB24022BCA00C46B6A /* gradient.jpeg */,
 				67FD46982401C4A800A5277B /* womanFront.png */,
 				67FD46962401C4A000A5277B /* womanBack.png */,
 				67FD46942401C2FC00A5277B /* human_body_template___female_by_myraethcorax_d6yeynw-fullview.png */,
 				67860ACF2401BC1800471136 /* icons8-medical-mobile-app-64.png */,
 				67FD469A2401FE4A00A5277B /* GradientView.swift */,
+				6716AB5A2402462A0029A104 /* L102Localizer.swift */,
 			);
 			path = MEDT;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 				67FD46952401C2FD00A5277B /* human_body_template___female_by_myraethcorax_d6yeynw-fullview.png in Resources */,
 				67FD46992401C4A800A5277B /* womanFront.png in Resources */,
 				67860AC32401BA3500471136 /* Main.storyboard in Resources */,
+				67E59DDC24022BCA00C46B6A /* gradient.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +171,7 @@
 				67860ABC2401BA3500471136 /* AppDelegate.swift in Sources */,
 				67FD469B2401FE4A00A5277B /* GradientView.swift in Sources */,
 				67860ABE2401BA3500471136 /* SceneDelegate.swift in Sources */,
+				6716AB5B2402462A0029A104 /* L102Localizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

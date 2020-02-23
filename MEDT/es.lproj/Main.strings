@@ -3,16 +3,16 @@
 "4j9-Iw-FMm.normalTitle" = "♀";
 
 /* Class = "UILabel"; text = "Select General Area"; ObjectID = "79e-cw-6BL"; */
-"79e-cw-6BL.text" = "Select General Area";
+"79e-cw-6BL.text" = "Seleccione área general";
 
 /* Class = "UILabel"; text = "MED-T"; ObjectID = "BBJ-VO-9iF"; */
 "BBJ-VO-9iF.text" = "MED-T";
 
 /* Class = "UILabel"; text = "Select Front or Back"; ObjectID = "IlA-C6-0l7"; */
-"IlA-C6-0l7.text" = "seleccione anverso o reverso";
+"IlA-C6-0l7.text" = "Seleccione Anverso o Reverso";
 
 /* Class = "UIButton"; normalTitle = "Select"; ObjectID = "LkA-eg-KGb"; */
-"LkA-eg-KGb.normalTitle" = "Select";
+"LkA-eg-KGb.normalTitle" = "Seleccione";
 
 /* Class = "UIButton"; normalTitle = "⚥\t"; ObjectID = "YPx-nn-R86"; */
 "YPx-nn-R86.normalTitle" = "⚥\t";
@@ -21,4 +21,4 @@
 "h4V-Cw-cde.normalTitle" = "♂";
 
 /* Class = "UILabel"; text = "Select General Area"; ObjectID = "vd5-Hc-Wu5"; */
-"vd5-Hc-Wu5.text" = "Select General Area";
+"vd5-Hc-Wu5.text" = "Seleccione Anverso o Reverso";

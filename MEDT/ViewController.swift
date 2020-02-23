@@ -7,6 +7,30 @@
 //
 
 import UIKit
+public var on = 0
+
+// constants
+let APPLE_LANGUAGE_KEY = "AppleLanguages"
+// L102Language
+class L102Language {
+// get current Apple language
+class func currentAppleLanguage() -> String{
+    let userdef = UserDefaults.standard
+    let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
+let current = langArray.firstObject as! String
+return current
+}
+// set @lang to be the first in Applelanguages list
+class func setAppleLAnguageTo(lang: String) {
+    let userdef = UserDefaults.standard
+    userdef.set([lang,currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
+userdef.synchronize()
+}
+}
+
+
+
+
 
 class ViewController: UIViewController {
     
@@ -38,12 +62,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationController?.modalPresentationStyle = .overFullScreen
         self.modalPresentationStyle = .fullScreen
-        let seconds = 2.0
+        let seconds = 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.navigationController?.setViewControllers([LanguageSelectorViewController.viewController()], animated: true)
         }
     }
 }
+
+
+
+
+
 
 class LanguageSelectorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -60,8 +89,17 @@ class LanguageSelectorViewController: UIViewController, UIPickerViewDelegate, UI
     
     // Capture the picker view selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
+        if (row == 0){
+            
+            L102Language.setAppleLAnguageTo(lang: "en")
+            
+            // Bundle.swizzleLocalization(row: 0)
+        } else {
+            L102Language.setAppleLAnguageTo(lang: "es")
+            
+            // Bundle.swizzleLocalization(row: 1)
+        }
+        
     }
     
     
@@ -117,6 +155,11 @@ class LanguageSelectorViewController: UIViewController, UIPickerViewDelegate, UI
         self.navigationController?.pushViewController(SexSelectorViewController.viewController(), animated: true)
     }
 }
+
+
+
+
+
     
 class SexSelectorViewController: UIViewController {
     
@@ -150,6 +193,11 @@ class SexSelectorViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
+    
+    
+    
+    
+    
     static func viewController() -> SexSelectorViewController {
         // Create a reference to the the appropriate storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -164,6 +212,11 @@ class SexSelectorViewController: UIViewController {
     }
 }
 
+
+
+
+
+
 class MaleViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -173,6 +226,11 @@ class MaleViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
+
+
+
+
+
 
 class FemaleViewController: UIViewController {
     
@@ -213,6 +271,11 @@ class NeutralViewController: UIViewController {
     }
 }
 
+
+
+
+
+
 class FemaleFrontViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -250,6 +313,11 @@ class FemaleFrontViewController: UIViewController {
     }
 }
 
+
+
+
+
+
 class FemaleBackViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -269,6 +337,11 @@ class FemaleBackViewController: UIViewController {
        }
 }
 
+
+
+
+
+
 class FemaleHeadViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -278,6 +351,15 @@ class FemaleHeadViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
+    @IBAction func chinTapped(_ sender: Any) {
+        navigationController?.present(ChinVC.viewController(), animated: true)
+        
+        let seconds = 1.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.navigationController?.pushViewController(HighlightChinViewController.viewController(), animated: false)
+        }
+        
+    }
     static func viewController() -> FemaleHeadViewController {
         // Create a reference to the the appropriate storyboard
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -288,6 +370,11 @@ class FemaleHeadViewController: UIViewController {
     }
     
 }
+
+
+
+
+
 
 class FemaleRArmViewController: UIViewController {
     
@@ -308,6 +395,11 @@ class FemaleRArmViewController: UIViewController {
     }
 }
 
+
+
+
+
+
 class FemaleChestViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -326,6 +418,11 @@ class FemaleChestViewController: UIViewController {
         return storyboard.instantiateViewController(withIdentifier: "FemaleChestViewController") as! FemaleChestViewController
     }
 }
+
+
+
+
+
 
 class FemaleUpperLegViewController: UIViewController {
     
@@ -346,6 +443,11 @@ class FemaleUpperLegViewController: UIViewController {
     }
 }
 
+
+
+
+
+
 class FemaleLowerLegViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -365,6 +467,11 @@ class FemaleLowerLegViewController: UIViewController {
     }
 }
 
+
+
+
+
+
 class FemaleLArmViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -381,5 +488,57 @@ class FemaleLArmViewController: UIViewController {
         // Instantiate the desired view controller from the storyboard using the view controllers identifier
         // Cast is as the custom view controller type you created in order to access it's properties and methods
         return storyboard.instantiateViewController(withIdentifier: "FemaleLArmViewController") as! FemaleLArmViewController
+    }
+}
+
+
+
+
+
+class ChinVC: UIViewController {
+    // @IBOutlet weak var myslider: UISlider!
+//    override func viewDidLoad() {
+//    super.viewDidLoad()
+//    }
+    
+    
+    // do all copy stuff
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.modalPresentationStyle = .overCurrentContext
+    }
+    
+    static func viewController() -> ChinVC{
+        // Create a reference to the the appropriate storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        // Instantiate the desired view controller from the storyboard using the view controllers identifier
+        // Cast is as the custom view controller type you created in order to access it's properties and methods
+        return storyboard.instantiateViewController(withIdentifier: "ChinVC") as! ChinVC
+    }
+    
+    @IBAction func didSelectDone(_ sender: Any) {
+        self.navigationController?.pushViewController(HighlightChinViewController.viewController(), animated: true)
+        self.dismiss(animated: true)
+        
+    }
+}
+
+class HighlightChinViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.modalPresentationStyle = .fullScreen
+    }
+    
+    static func viewController() -> HighlightChinViewController{
+        // Create a reference to the the appropriate storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        // Instantiate the desired view controller from the storyboard using the view controllers identifier
+        // Cast is as the custom view controller type you created in order to access it's properties and methods
+        return storyboard.instantiateViewController(withIdentifier: "HighlightChinViewController") as! HighlightChinViewController
     }
 }
